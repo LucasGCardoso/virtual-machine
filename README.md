@@ -37,15 +37,10 @@ The console is responsible for printing eventual outputs the process can return.
 
 
 ## Programs
- - p1.txt: Executa os 10 primeiros números da sequência de fibonacci.
- - p2.txt: Um programa que le um valor de uma determinada posição (carregada no inicio),
-            se o número for menor que zero coloca -1 no início da posição de memória para saída;
-            se for maior que zero este é o número de valores
-            da sequencia de fibonacci a serem escritos em sequencia a partir de uma posição de
-            memoria;
- - p3.txt: Calcula o fatorial de um número
- - p4.txt: Ordena um vetor por bubble sort.
- - p5.txt: Dada a entrada de um numero 'n' inteiro, o p5 calcula os n primeiros numeros da sequencia de fibonacci, depois dos dois primeiros numeros da sequencia.
-           Ex.: Entrada 5 retorna os valores 0 1 1 2 3 5 8.
- - p6.txt: Calcula os 50 primeiros numeros de fibonacci, dando erro de acesso de memoria para fins de simulaçao de erro.
- - p7.txt: Calcula o fatorial de um numero e escreve o seu valor pelo Console, para fins de simulaçao de saída.
+ - ```p1.txt```: Calculates the first 10 numbers of the Fibonacci Sequence.
+ - ```p2.txt```: Reads a value from a position in the memory, and calculates the Fibonacci Sequence, or puts -1 in memory, if the number is negative.
+ - ```p3.txt```: Calculates the factorial of a number.
+ - ```p4.txt```: Sorts a  vector using Bubble Sort.
+ - ```p5.txt```: Given the input of a number N, calculates the first N number of the Fibonacci Sequence after the two first numbers, for I/O simulation pourposes. For instance: given 5, returns 0 1 1 2 3 5 8.
+ - ```p6.txt```: Calculates the first 50 numbers of the Fibonacci Sequence, resulting in Illegal Memory Access Error, for simulation pourposes.
+ - ```p7.txt```: Calculates the factorial of a number and writes this value, using the Console output, for I/O simulation pourposes.
