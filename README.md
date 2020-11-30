@@ -9,11 +9,19 @@ In this section, you will cover al the basic classes of the OS and how they work
 
 ### GP
 The GP, meaning Process Manager (Gerenciador de Processos), is reponsible for creating and finalizing processes. When created, the process is stored in a segment of the memory, which is allocated by the Memory Manager (GM), and then, it is sent to the Ready Queue. When finalized, the process is cleared from the memory. 
+
 ### GM
 This is the Memory Manager (Gerente de Memória), responsible for allocating and deallocating the memory, mapping each program to its correct memory frame.
+
 ### Thread Escalonador
+This class is treated as a Java Thread, and its responsible for coordinating which process goes to the CPU (to run) and which ones keep waiting or keep blocked.
+
 ### Thread CPU
+The CPU is also a Thread, and it executes each assembly command the processes have, running them, one by one, until the running process gets interrupted by timer, STOP command, or some errors, such as Illegal Memory Access.
+
 ### Rotinas
+The Routines contain a bunch of functions, that are executed for each specific Interruption the CPU generates. For instance, when a process stops, reaching the STOP command, a routine is called, clearing the process from the memory, and putting the next one in the CPU.
+
 ### Thread Shell
 ### Thread Console
 
