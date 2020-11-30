@@ -8,7 +8,7 @@ public class CPU extends Thread {
 	private int programCounter;
 	private Word instrucionRegister;
 	private int[] registers;
-	private Interrupts interrupts;
+	public Interrupts interrupts;
 	private int base;
 	private int limite;
 	private Word[] memory;
@@ -25,15 +25,18 @@ public class CPU extends Thread {
 
 	public void setAttributes(Word[] memory, Semaphore escSemaforo, Semaphore cpuSemaforo, Rotinas rotinas) {
 		this.memory = memory;
-		registers = new int[8];
+		registers = new int[10];
 		this.escSemaforo = escSemaforo;
 		this.cpuSemaforo = cpuSemaforo;
 		this.rotinas = rotinas;
 	}
 
 	public int translateMemory(int address){
-//		System.out.println(address);
-		return (allocatedPages[(address / 16)] * 16) + (address % 16);
+		try {
+			return (allocatedPages[(address / 16)] * 16) + (address % 16);
+		} catch(ArrayIndexOutOfBoundsException e) {
+			return -1;
+		}
 	}
 
 	public Context getContext() {
@@ -80,6 +83,10 @@ public class CPU extends Thread {
 		return true;
 	}
 
+	public void callIOInterrupt() {
+		rotinas.tratamentoIO(getContext());
+	}
+
 	public void run() {
 
 		while(true) {
@@ -90,7 +97,6 @@ public class CPU extends Thread {
 			}
 
 			while (true) {
-
 				//Fetch
 				if (isLegal(translateMemory(programCounter))) {
 					instrucionRegister = memory[translateMemory(programCounter)];
@@ -232,6 +238,11 @@ public class CPU extends Thread {
 							programCounter++;
 							break;
 
+						case TRAP:
+							interrupts = Interrupts.INT_IO_CALL;
+							programCounter ++;
+							break;
+
 						case STOP:
 							interrupts = Interrupts.INT_STOP;
 							break;
@@ -252,17 +263,20 @@ public class CPU extends Thread {
 
 				if (interrupts != Interrupts.NO_INTERRUPT) {
 					switch (interrupts){
-						case INT_STOP:
 						case INT_ENDERECO_INVALIDO:
+							System.out.println("Tentativa de acesso de endereço invalido.");
+							rotinas.stop();
+							break;
+						case INT_STOP:
 						case INT_INSTRUCAO_INVALIDA:
-							//Aqui mandamos para a rotina de tratamento de STOP, onde ele finaliza o processo,
-							// chamando o GP e escalona novo processo
 							rotinas.stop();
 							break;
 						case INT_TIMER:
-							//Aqui mandamos para a rotina de tratamento de TIMER, onde ele salva o estado atual do processo,
-							// chamando o GP e escalona novo processo
 							rotinas.timer(getContext());
+							break;
+						case INT_IO_CALL:
+							rotinas.chamadaIO(getContext());
+							break;
 					}
 					break;
 				}
