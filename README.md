@@ -37,6 +37,7 @@ The console is responsible for printing eventual outputs the process can return.
 
 
 ## Programs
+The programs are stored in the ```in``` folder.
  - ```p1.txt```: Calculates the first 10 numbers of the Fibonacci Sequence.
  - ```p2.txt```: Reads a value from a position in the memory, and calculates the Fibonacci Sequence, or puts -1 in memory, if the number is negative.
  - ```p3.txt```: Calculates the factorial of a number.
