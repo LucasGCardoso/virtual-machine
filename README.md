@@ -1,8 +1,15 @@
 # Virtual Machine and OS
 A virtual machine, that runs a simple Operational System. Everything here is implemented in Java, for OS subject's final test, in PUCRS university. 
 
+## Usage
+- To run this project, after cloning it, you should simply run the Application.java
+- To choose which program to run, just run the command ```s <PROGRAM_NUMBER>```. For instance: 's 1' runs the program ```p1.txt```
+- To give values for the programs that require input, just type ``` c <INT_VALUE> ```. For instance: 'c 5' sends the number 5 to the console.
+- The programs should be named as ```p<NUMBER>.txt``` to properly work
+- In the end of each process, a memory dump is given, before clearing the process from the memory.
+
 ## Description
-The OS, that runs in the virtual machine, simulates the basic aspects of a real OS, just as process management, memory management, memory pagination, PCBs, etc. All of this was made for learning pouposes only. The processes that can run in it are individual programs, writen in its assembly language. You can also try writing new programs and run them. The group implemented this project using Java Threads as well, so that everything could be concurrent, just as in a real OS.
+The OS, that runs in the virtual machine, simulates the basic aspects of a real OS, just as process management, memory management, memory pagination, PCBs, etc. The OS only accepts INT inputs. The processes that can run in it are individual programs, writen in its assembly language. You can also try writing new programs and run them. The group implemented this project using Java Threads as well, so that everything could be concurrent, just as in a real OS. Please note that all of this was made for learning pouposes only.
 
 ## OS Main Parts
 In this section, you will cover al the basic classes of the OS and how they work and are related.
@@ -22,17 +29,14 @@ The CPU is also a Thread, and it executes each assembly command the processes ha
 ### Rotinas
 The Routines contain a bunch of functions, that are executed for each specific Interruption the CPU generates. For instance, when a process stops, reaching the STOP command, a routine is called, clearing the process from the memory, and putting the next one in the CPU.
 
-### Thread Shell
-### Thread Console
+### Thread Application (Shell)
+This is the Shell of the OS, responsible for reading the entries of the user, that chooses the next program to run.
 
-## Usage
-COMANDOS
- - Rodar Application.java;
- - Para escolher o programa, rodar o comando 's <numero do programa>'. Ex.: 's 1' roda o programa p1.txt
- - Para digitar valores nos programas que solicitam entrada, digitar 'c <valor>'. Ex.: 'c 5' envia o número 5 para o console.
+### Thread Console
+The console is responsible for printing eventual outputs the process can return. It also waits a process to call for an input, asking it for the user. Please, note that our OS only accepts INT inputs.
+
 
 ## Programs
-PROGRAMAS
  - p1.txt: Executa os 10 primeiros números da sequência de fibonacci.
  - p2.txt: Um programa que le um valor de uma determinada posição (carregada no inicio),
             se o número for menor que zero coloca -1 no início da posição de memória para saída;
