@@ -2,7 +2,7 @@
 A virtual machine, that runs a simple Operational System. Everything here is implemented in Java, for OS subject's final test, in PUCRS university. 
 
 ## Usage
-- To run this project, after cloning it, you should simply run the Application.java
+- To run this project, after cloning it, you should simply run the ```Application.java``` file.
 - To choose which program to run, just run the command ```s <PROGRAM_NUMBER>```. For instance: 's 1' runs the program ```p1.txt```
 - To give values for the programs that require input, just type ``` c <INT_VALUE> ```. For instance: 'c 5' sends the number 5 to the console.
 - The programs should be named as ```p<NUMBER>.txt``` to properly work
