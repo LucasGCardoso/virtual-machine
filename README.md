@@ -56,5 +56,5 @@ The programs are stored in the ```in``` folder.
  
 | Number  |  Opcode  | Syntax  |  Operation  |
 | ------- | -------- | ------- | ----------- |
-| 1 | JMP | JMP k | PC &larr k |
-| 2 | JMPI | JMPI R1 | PC &larr R1 |
+| 1 | JMP | JMP k | PC &#8592; k |
+| 2 | JMPI | JMPI R1 | PC &#8592; R1 |
