@@ -48,6 +48,13 @@ The programs are stored in the ```in``` folder.
  
  ## Assembly Commands
  Next, there is a table with the assembly commands the CPU supports, therefore, the ones that can be used to write a program.
+- ``` PC ``` means Program Counter
+-  ``` k ``` means an integer number
+-  ``` R1 ``` means Register 1
+-  ``` R2 ``` means Register 2
+-  ``` [A] ``` means a position in the memory
+ 
 | Number  |  Opcode  | Syntax  |  Operation  |
 | ------- | -------- | ------- | ----------- |
-| 1 | JMP | JMP k | PC <-- k |
+| 1 | JMP | JMP k | PC &larr k |
+| 2 | JMPI | JMPI R1 | PC &larr R1 |
