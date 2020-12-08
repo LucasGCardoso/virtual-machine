@@ -58,7 +58,7 @@ The programs are stored in the ```in``` folder.
 | ------- | -------- | ------- | ----------- |
 | 1 | JMP | JMP k | PC &#8592; k |
 | 2 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 3 | JMPIG | JMPIG R1, R2 | if R1 > 0 then PC &#8592; R2 else PC &#8592 PC + 1 |
+| 3 | JMPIG | JMPIG R1, R2 | if R1 > 0 then PC &#8592; R2 else PC &#8592; PC + 1 |
 | 4 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 5 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 6 | JMPI | JMPI R1 | PC &#8592; R1 |
