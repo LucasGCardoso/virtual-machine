@@ -46,7 +46,7 @@ The programs are stored in the ```in``` folder.
  - ```p6.txt```: Calculates the first 50 numbers of the Fibonacci Sequence, resulting in Illegal Memory Access Error, for simulation pourposes.
  - ```p7.txt```: Calculates the factorial of a number and writes this value, using the Console output, for I/O simulation pourposes.
  
- ## Assembly Commands
+ ## Assembly Commands (Under Construction)
  Next, there is a table with the assembly commands the CPU supports, therefore, the ones that can be used to write a program.
 - ``` PC ``` means Program Counter
 -  ``` k ``` means an integer number
@@ -58,7 +58,7 @@ The programs are stored in the ```in``` folder.
 | ------- | -------- | ------- | ----------- |
 | 1 | JMP | JMP k | PC &#8592; k |
 | 2 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 3 | JMPI | JMPI R1 | PC &#8592; R1 |
+| 3 | JMPIG | JMPIG R1, R2 | if R1 > 0 then PC &#8592; R2 else PC &#8592 PC + 1 |
 | 4 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 5 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 6 | JMPI | JMPI R1 | PC &#8592; R1 |
