@@ -47,7 +47,7 @@ The programs are stored in the ```in``` folder.
  - ```p7.txt```: Calculates the factorial of a number and writes this value, using the Console output, for I/O simulation pourposes.
  
  ## Assembly Commands (Under Construction)
- Next, there is a table with the assembly commands the CPU supports, therefore, the ones that can be used to write a program.
+ Next, there is a table with the assembly commands the CPU supports, therefore, the ones that can be used to write a program. If you wish to add more Assembly Commands, you can always add them in the CPU and in the Opcode enums.
 - ``` PC ``` means Program Counter
 -  ``` k ``` means an integer number
 -  ``` R1 ``` means Register 1
