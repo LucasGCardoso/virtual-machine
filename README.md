@@ -52,7 +52,9 @@ The programs are stored in the ```in``` folder.
 -  ``` k ``` means an integer number
 -  ``` R1 ``` means Register 1
 -  ``` R2 ``` means Register 2
--  ``` [A] ``` means a position in the memory
+-  ``` [A] ``` means a position in the memory, pointed by the value of an integer A
+-  ``` [R1] ``` means a position in the memory, pointed by the value in R1
+-  ``` [R2] ``` means a position in the memory, pointed by the value in R2
  
 | Number  |  Opcode  | Syntax  |  Operation  |
 | ------- | -------- | ------- | ----------- |
