@@ -59,12 +59,12 @@ The programs are stored in the ```in``` folder.
 | 1 | JMP | JMP k | PC &#8592; k |
 | 2 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 3 | JMPIG | JMPIG R1, R2 | if R1 > 0 then PC &#8592; R2 else PC &#8592; PC + 1 |
-| 4 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 5 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 6 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 7 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 8 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 9 | JMPI | JMPI R1 | PC &#8592; R1 |
+| 4 | JMPIL | JMPIL R1, R2 | if R1 < 0 then PC &#8592; R2 else PC &#8592; PC + 1 |
+| 5 | JMPIE | JMPIE R1, R2 | if R1 = 0 then PC &#8592; R2 else PC &#8592; PC + 1 |
+| 6 | JMPIM | JMPIM [A] | PC &#8592; [A] |
+| 7 | JMPIGM | JMPIGM [A], R1 | if R1 > 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
+| 8 | JMPILM | JMPILM [A], R1 | if R1 < 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
+| 9 | JMPIEM | JMPIEM [A], R1 | if R1 = 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
 | 10 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 11 | JMPI | JMPI R1 | PC &#8592; R1 |
 | 12 | JMPI | JMPI R1 | PC &#8592; R1 |
