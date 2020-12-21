@@ -65,15 +65,15 @@ The programs are stored in the ```in``` folder.
 | 7 | JMPIGM | JMPIGM [A], R1 | if R1 > 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
 | 8 | JMPILM | JMPILM [A], R1 | if R1 < 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
 | 9 | JMPIEM | JMPIEM [A], R1 | if R1 = 0 then PC &#8592; [A] Else PC &#8592; PC +1 |
-| 10 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 11 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 12 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 13 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 14 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 15 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 16 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 17 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 18 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 19 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 20 | JMPI | JMPI R1 | PC &#8592; R1 |
-| 21 | JMPI | JMPI R1 | PC &#8592; R1 |
+| 10 | ADDI | ADDI R1, k | R1 &#8592; R1 + k |
+| 11 | SUBI | SUBI R1, k | R1 &#8592; R1 - k |
+| 12 | LDI |  LDI R1, k | R1 &#8592; k |
+| 13 | LDD | LDD R1, [A] | R1 &#8592; [A] |
+| 14 | STD | STD [A], R1 | [A] &#8592; R1 |
+| 15 | ADD | ADD R1, R2 | R2 &#8592; R1 + R2 |
+| 16 | SUB | SUB R1, R2 | R2 &#8592; R1 - R2 |
+| 17 | MULT | MULT R1, R2 | R2 &#8592; R1 * R2 |
+| 18 | LDX | LDX R1, [R2] | R1 &#8592; [R2] |
+| 19 | STX | STX [R1], R2 | [R1] &#8592; R2 |
+| 20 | SWAP | SWAP R1, R2 | T &#8592; R1, R1 &#8592; R2, R2 &#8592; T |
+| 21 | STOP | STOP | Stops the Program |
