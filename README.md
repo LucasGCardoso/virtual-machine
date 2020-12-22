@@ -12,7 +12,7 @@ A virtual machine, that runs a simple Operational System. Everything here is imp
 The OS, that runs in the virtual machine, simulates the basic aspects of a real OS, just as process management, memory management, memory pagination, PCBs, etc. The OS only accepts INT inputs. The processes that can run in it are individual programs, writen in its assembly language. You can also try writing new programs and run them. The group implemented this project using Java Threads as well, so that everything could be concurrent, just as in a real OS. Please note that all of this was made for learning pouposes only.
 
 ## OS Main Parts
-In this section, you will cover al the basic classes of the OS and how they work and are related.
+In this section, you will cover all the basic classes of the OS and how they work and are related.
 
 ### GP
 The GP, meaning Process Manager (Gerenciador de Processos), is reponsible for creating and finalizing processes. When created, the process is stored in a segment of the memory, which is allocated by the Memory Manager (GM), and then, it is sent to the Ready Queue. When finalized, the process is cleared from the memory. 
