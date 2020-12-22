@@ -1,12 +1,6 @@
 # Virtual Machine and OS
 A virtual machine, that runs a simple Operational System. Everything here is implemented in Java, for OS subject's final test, in PUCRS university. 
 
-# Table of Contents  
-[Virtual Machine and OS](#virtual-machine-and-os)
-[Usage](##usage)
-[Description](##description)
-
-
 ## Usage
 - To run this project, after cloning it, you should simply run the ```Application.java``` file.
 - To choose which program to run, just run the command ```s <PROGRAM_NUMBER>```. For instance: 's 1' runs the program ```p1.txt```
